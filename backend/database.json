@@ -1,0 +1,329 @@
+{
+  "products": [
+    {
+      "id": "prod-1",
+      "sku": "MA-SLKDRES-M",
+      "name": "Silk Slip Midi Dress",
+      "category": "Apparel",
+      "size": "M",
+      "color": "Champagne",
+      "image": "/images/silk_slip_dress.png",
+      "cost": 75,
+      "price": 220,
+      "stock": 14,
+      "lowStockThreshold": 4
+    },
+    {
+      "id": "prod-2",
+      "sku": "MA-WBLZ-L",
+      "name": "Tailored Wool Blazer",
+      "category": "Apparel",
+      "size": "L",
+      "color": "Noir",
+      "image": "/images/wool_blazer.png",
+      "cost": 110,
+      "price": 340,
+      "stock": 8,
+      "lowStockThreshold": 3
+    },
+    {
+      "id": "prod-3",
+      "sku": "MA-CSHM-S",
+      "name": "Cashmere Knit Sweater",
+      "category": "Apparel",
+      "size": "S",
+      "color": "Oatmeal",
+      "image": "/images/cashmere_sweater.png",
+      "cost": 85,
+      "price": 260,
+      "stock": 11,
+      "lowStockThreshold": 4
+    },
+    {
+      "id": "prod-4",
+      "sku": "MA-SADL-OS",
+      "name": "Leather Saddle Bag",
+      "category": "Leather Goods",
+      "size": "O/S",
+      "color": "Cognac",
+      "image": "/images/leather_bag.png",
+      "cost": 140,
+      "price": 420,
+      "stock": 4,
+      "lowStockThreshold": 2
+    },
+    {
+      "id": "prod-5",
+      "sku": "MA-BOOT-38",
+      "name": "Croc-Effect Ankle Boots",
+      "category": "Leather Goods",
+      "size": "38",
+      "color": "Espresso",
+      "image": "/images/ankle_boots.png",
+      "cost": 90,
+      "price": 295,
+      "stock": 6,
+      "lowStockThreshold": 2
+    },
+    {
+      "id": "prod-6",
+      "sku": "MA-FRG-100",
+      "name": "Aura Signature Parfum",
+      "category": "Fragrances",
+      "size": "100ml",
+      "color": "Clear",
+      "image": "/images/boutique_fallback.png",
+      "cost": 45,
+      "price": 135,
+      "stock": 20,
+      "lowStockThreshold": 5
+    },
+    {
+      "id": "prod-7",
+      "sku": "MA-GLNK-OS",
+      "name": "Gold Link Chain Necklace",
+      "category": "Accessories",
+      "size": "O/S",
+      "color": "24k Gold",
+      "image": "/images/boutique_fallback.png",
+      "cost": 35,
+      "price": 115,
+      "stock": 18,
+      "lowStockThreshold": 5
+    },
+    {
+      "id": "prod-8",
+      "sku": "MA-SUN-OS",
+      "name": "Cat-Eye Sunglasses",
+      "category": "Accessories",
+      "size": "O/S",
+      "color": "Tortoise",
+      "image": "/images/boutique_fallback.png",
+      "cost": 28,
+      "price": 95,
+      "stock": 25,
+      "lowStockThreshold": 6
+    },
+    {
+      "id": "prod-9",
+      "sku": "MA-LINSKR-S",
+      "name": "Linen Wrap Skirt",
+      "category": "Apparel",
+      "size": "S",
+      "color": "Sage",
+      "image": "/images/boutique_fallback.png",
+      "cost": 42,
+      "price": 130,
+      "stock": 14,
+      "lowStockThreshold": 4
+    }
+  ],
+  "sales": [
+    {
+      "id": "sale-1001",
+      "timestamp": "2026-06-27T14:23:45.000Z",
+      "items": [
+        {
+          "productId": "prod-1",
+          "name": "Silk Slip Midi Dress",
+          "price": 220,
+          "cost": 75,
+          "quantity": 1,
+          "size": "M",
+          "color": "Champagne"
+        },
+        {
+          "productId": "prod-7",
+          "name": "Gold Link Chain Necklace",
+          "price": 115,
+          "cost": 35,
+          "quantity": 1,
+          "size": "O/S",
+          "color": "24k Gold"
+        }
+      ],
+      "subtotal": 335,
+      "discount": 33.5,
+      "tax": 30.15,
+      "total": 331.65,
+      "paymentMethod": "card",
+      "amountPaid": 331.65,
+      "changeDue": 0,
+      "customerName": "Eleanor Vance",
+      "customerEmail": "eleanor@vance.com",
+      "customerPhone": "555-019-2834",
+      "isGift": false,
+      "giftMessage": "",
+      "giftWrapFee": 0
+    },
+    {
+      "id": "sale-1002",
+      "timestamp": "2026-06-28T11:12:02.000Z",
+      "items": [
+        {
+          "productId": "prod-2",
+          "name": "Tailored Wool Blazer",
+          "price": 340,
+          "cost": 110,
+          "quantity": 1,
+          "size": "L",
+          "color": "Noir"
+        }
+      ],
+      "subtotal": 340,
+      "discount": 0,
+      "tax": 34,
+      "total": 379,
+      "paymentMethod": "card",
+      "amountPaid": 379,
+      "changeDue": 0,
+      "customerName": "Julian Vane",
+      "customerEmail": "julian@vane.com",
+      "customerPhone": "555-021-9876",
+      "isGift": true,
+      "giftMessage": "Happy Anniversary, my love!",
+      "giftWrapFee": 5
+    },
+    {
+      "id": "sale-1003",
+      "timestamp": "2026-06-28T16:45:00.000Z",
+      "items": [
+        {
+          "productId": "prod-6",
+          "name": "Aura Signature Parfum",
+          "price": 135,
+          "cost": 45,
+          "quantity": 1,
+          "size": "100ml",
+          "color": "Clear"
+        },
+        {
+          "productId": "prod-8",
+          "name": "Cat-Eye Sunglasses",
+          "price": 95,
+          "cost": 28,
+          "quantity": 1,
+          "size": "O/S",
+          "color": "Tortoise"
+        }
+      ],
+      "subtotal": 230,
+      "discount": 0,
+      "tax": 23,
+      "total": 253,
+      "paymentMethod": "cash",
+      "amountPaid": 300,
+      "changeDue": 47,
+      "customerName": "Sophia Loren",
+      "customerEmail": "sophia@loren.com",
+      "customerPhone": "555-045-8812",
+      "isGift": false,
+      "giftMessage": "",
+      "giftWrapFee": 0
+    },
+    {
+      "id": "sale-1004",
+      "timestamp": "2026-06-29T10:05:00.000Z",
+      "items": [
+        {
+          "productId": "prod-4",
+          "name": "Leather Saddle Bag",
+          "price": 420,
+          "cost": 140,
+          "quantity": 1,
+          "size": "O/S",
+          "color": "Cognac"
+        }
+      ],
+      "subtotal": 420,
+      "discount": 42,
+      "tax": 37.8,
+      "total": 415.8,
+      "paymentMethod": "card",
+      "amountPaid": 415.8,
+      "changeDue": 0,
+      "customerName": "Clara Bow",
+      "customerEmail": "clara@bow.com",
+      "customerPhone": "555-099-1122",
+      "isGift": true,
+      "giftMessage": "To Clara, with elegance.",
+      "giftWrapFee": 5
+    },
+    {
+      "id": "sale-1782768722268",
+      "timestamp": "2026-06-29T21:32:02.269Z",
+      "items": [
+        {
+          "productId": "prod-4",
+          "name": "Leather Saddle Bag",
+          "price": 420,
+          "cost": 140,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 420,
+      "discount": 0,
+      "tax": 42,
+      "total": 462,
+      "paymentMethod": "cash",
+      "amountPaid": 462,
+      "changeDue": 0
+    },
+    {
+      "id": "sale-1782769479784",
+      "timestamp": "2026-06-29T21:44:39.784Z",
+      "items": [
+        {
+          "productId": "prod-1",
+          "name": "Silk Slip Midi Dress",
+          "price": 220,
+          "cost": 75,
+          "quantity": 1,
+          "size": "O/S",
+          "color": "N/A"
+        }
+      ],
+      "subtotal": 220,
+      "discount": 0,
+      "tax": 22,
+      "total": 242,
+      "paymentMethod": "cash",
+      "amountPaid": 242,
+      "changeDue": 0,
+      "customerName": "",
+      "customerEmail": "",
+      "customerPhone": "",
+      "isGift": false,
+      "giftMessage": "",
+      "giftWrapFee": 0
+    },
+    {
+      "id": "sale-1782770614414",
+      "timestamp": "2026-06-29T22:03:34.414Z",
+      "items": [
+        {
+          "productId": "prod-3",
+          "name": "Cashmere Knit Sweater",
+          "price": 260,
+          "cost": 85,
+          "quantity": 1,
+          "size": "O/S",
+          "color": "N/A"
+        }
+      ],
+      "subtotal": 260,
+      "discount": 0,
+      "tax": 26,
+      "total": 286,
+      "paymentMethod": "cash",
+      "amountPaid": 286,
+      "changeDue": 0,
+      "customerName": "owusu bright",
+      "customerEmail": "brightowusu639@gmail.com",
+      "customerPhone": "0547140375",
+      "isGift": false,
+      "giftMessage": "",
+      "giftWrapFee": 0
+    }
+  ]
+}
