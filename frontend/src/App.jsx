@@ -8,6 +8,7 @@ import { IconDashboard, IconBag, IconHanger, IconReports } from './components/Ic
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [toasts, setToasts] = useState([]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Toast dispatcher utility
   const addToast = (message, type = 'success', duration = 3000) => {
@@ -36,13 +37,13 @@ export default function App() {
   const getHeaderTitle = () => {
     switch (activeTab) {
       case 'dashboard':
-        return 'Maison Aura Performance Analytics';
+        return 'Maison Aura Analytics';
       case 'pos':
-        return 'Boutique Checkout Terminal';
+        return 'Boutique POS';
       case 'inventory':
-        return 'Apparel & Accessory Catalog';
+        return 'Apparel Catalog';
       case 'reports':
-        return 'Transaction Archive & Registry';
+        return 'Transaction Logs';
       default:
         return 'Dashboard';
     }
@@ -50,8 +51,16 @@ export default function App() {
 
   return (
     <div className="app-container">
+      {/* Mobile Drawer Overlay Backdrop */}
+      {isSidebarOpen && (
+        <div 
+          className="sidebar-overlay-backdrop"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
       {/* Sidebar Navigation */}
-      <aside className="sidebar">
+      <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <div>
           <div className="brand-section">
             <div className="brand-logo">M</div>
@@ -59,12 +68,19 @@ export default function App() {
               <h1 className="brand-name">MAISON AURA</h1>
               <span className="brand-tag">Luxury Boutique POS</span>
             </div>
+            {/* Close button inside sidebar on mobile */}
+            <button 
+              className="sidebar-mobile-close"
+              onClick={() => setIsSidebarOpen(false)}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
           </div>
           
           <nav className="nav-menu">
             <div 
               className={`nav-item ${activeTab === 'dashboard' ? 'active' : ''}`}
-              onClick={() => setActiveTab('dashboard')}
+              onClick={() => { setActiveTab('dashboard'); setIsSidebarOpen(false); }}
             >
               <IconDashboard size={18} className="nav-icon" />
               <span>Dashboard</span>
@@ -72,7 +88,7 @@ export default function App() {
             
             <div 
               className={`nav-item ${activeTab === 'pos' ? 'active' : ''}`}
-              onClick={() => setActiveTab('pos')}
+              onClick={() => { setActiveTab('pos'); setIsSidebarOpen(false); }}
             >
               <IconBag size={18} className="nav-icon" />
               <span>Checkout POS</span>
@@ -80,7 +96,7 @@ export default function App() {
             
             <div 
               className={`nav-item ${activeTab === 'inventory' ? 'active' : ''}`}
-              onClick={() => setActiveTab('inventory')}
+              onClick={() => { setActiveTab('inventory'); setIsSidebarOpen(false); }}
             >
               <IconHanger size={18} className="nav-icon" />
               <span>Inventory</span>
@@ -88,7 +104,7 @@ export default function App() {
             
             <div 
               className={`nav-item ${activeTab === 'reports' ? 'active' : ''}`}
-              onClick={() => setActiveTab('reports')}
+              onClick={() => { setActiveTab('reports'); setIsSidebarOpen(false); }}
             >
               <IconReports size={18} className="nav-icon" />
               <span>Sales Logs</span>
@@ -105,7 +121,13 @@ export default function App() {
       {/* Main Workspace Panels */}
       <main className="main-content">
         <header className="main-header">
-          <div className="header-title">
+          <div className="header-title" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <button 
+              className="hamburger-btn"
+              onClick={() => setIsSidebarOpen(true)}
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
             <h1>{getHeaderTitle()}</h1>
           </div>
           <div className="header-meta">

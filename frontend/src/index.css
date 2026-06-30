@@ -1271,3 +1271,158 @@ body {
 .modal-close:hover {
   color: var(--text-primary);
 }
+
+/* ==========================================================================
+   Responsive Media Queries for Mobile & Tablet Support
+   ========================================================================== */
+
+/* Show Hamburger Button only on smaller viewports */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+.hamburger-btn:hover {
+  opacity: 0.8;
+}
+
+.sidebar-mobile-close {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+}
+.sidebar-mobile-close:hover {
+  color: var(--text-primary);
+}
+
+.sidebar-overlay-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+}
+
+/* Tablet Screens (up to 1024px) */
+@media screen and (max-width: 1024px) {
+  .app-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .sidebar-mobile-close {
+    display: block;
+  }
+
+  /* Transform Sidebar into an Overlay Drawer */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    z-index: 101;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 20px 0 40px rgba(0, 0, 0, 0.6);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .brand-section {
+    justify-content: space-between;
+  }
+
+  /* POS Layout columns compression */
+  .pos-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow: visible;
+  }
+
+  .pos-products-container {
+    overflow-y: visible;
+    padding-right: 0;
+  }
+
+  .cart-panel {
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    margin-top: 24px;
+    padding-top: 24px;
+    height: auto;
+  }
+}
+
+/* Phone Screens (up to 768px) */
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 16px;
+  }
+
+  .main-header {
+    padding: 12px 0 16px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .header-meta {
+    font-size: 12px;
+  }
+
+  /* Stats grid columns collapse */
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  /* Forms row compression */
+  .form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* Custom table scroll improvements */
+  .custom-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  /* Product grid compression */
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .product-avatar {
+    height: 120px;
+  }
+
+  /* Modal contents overflow support */
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
